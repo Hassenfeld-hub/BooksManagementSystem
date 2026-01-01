@@ -1,0 +1,7 @@
+{
+  "host": "localhost",
+  "user": "root",
+  "password": "input your own password",
+  "database": "booksmanagementsystem",
+  "charset": "utf8mb4"
+}
