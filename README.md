@@ -18,7 +18,7 @@ BooksManagementSystem/
 │   └── [Python 脚本文件]      # 包含主程序逻辑、数据库操作等
 ├── library_db.exe             # 已打包的 Windows 可执行程序
 └── README.md                  # 项目说明文档
-
+```
 ## 🛠️ 技术栈 (Technology Stack)
 
 本项目采用 **Python 3** 生态系统构建，结合了高效的图形界面与轻量级数据库方案：
