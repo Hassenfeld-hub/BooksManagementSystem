@@ -31,3 +31,11 @@ BooksManagementSystem/
     *   采用本地轻量级 SQL 数据库，实现数据的持久化存储，无需配置复杂的服务器。
 *   **程序打包**：![PyInstaller](https://img.shields.io/badge/Tools-PyInstaller-yellow)
     *   将 Python 源码封装为独立的 `.exe` 文件，确保在未安装 Python 环境的 Windows 系统上也能运行。
+<img width="1502" height="948" alt="image" src="https://github.com/user-attachments/assets/d26146be-de89-4467-83e7-bcf9cc5fa012" />
+<img width="1502" height="948" alt="image" src="https://github.com/user-attachments/assets/fe9bd176-50e1-4031-b6a4-1944853bc63a" />
+<img width="1502" height="948" alt="image" src="https://github.com/user-attachments/assets/bfb95026-4347-4482-bda8-1ab4fd715b91" />
+<img width="1502" height="948" alt="image" src="https://github.com/user-attachments/assets/33f8f27e-da48-4785-9e86-284774e70fd9" />
+
+
+
+
