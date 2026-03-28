@@ -14,7 +14,6 @@ import sys
 def load_config():
     # 1. 这里是“默认配置” (已脱敏)
     # 这里的密码必须改为空，或者填个假数据。
-    # 绝对不要在这里填写真实密码 'hunter060504'！
     default_config = {
         'host': 'localhost',
         'user': 'root',
