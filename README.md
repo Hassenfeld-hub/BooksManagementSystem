@@ -14,11 +14,61 @@
 
 ```text
 BooksManagementSystem/
-├── BooksManagementSystem/     # 源代码核心目录
-│   └── [Python 脚本文件]      # 包含主程序逻辑、数据库操作等
-├── library_db.exe             # 已打包的 Windows 可执行程序
-└── README.md                  # 项目说明文档
+├── BooksManagementSystem/                       # 源代码核心目录
+│   ├── BooksManagementSystem.sql.template       # 数据库结构模板（需替换密码占位符后导入）
+│   ├── config.json.template                     # 数据库连接配置模板
+│   ├── library_db.py                            # 主程序逻辑与数据库操作
+│   └── requirements.txt                         # Python 依赖列表
+├── .gitignore                                   # 排除敏感文件（config.json、*.sql 等）
+├── library_db.exe                               # 已打包的 Windows 可执行程序
+└── README.md                                    # 项目说明文档
 ```
+
+## 🔒 安全配置说明 (Security Setup)
+
+> **重要**：本项目使用外置配置文件管理数据库凭据，请严格按照以下步骤操作，**切勿将真实密码提交到版本库**。
+
+### 第一步：配置数据库连接
+
+1. 复制配置模板文件：
+   ```bash
+   cp BooksManagementSystem/config.json.template BooksManagementSystem/config.json
+   ```
+2. 编辑 `BooksManagementSystem/config.json`，填入你自己的数据库信息：
+   ```json
+   {
+     "host": "localhost",
+     "user": "root",
+     "password": "YOUR_ACTUAL_PASSWORD",
+     "database": "booksmanagementsystem",
+     "charset": "utf8mb4"
+   }
+   ```
+3. **`config.json` 已被 `.gitignore` 排除，不会被提交到版本库。**
+
+### 第二步：初始化数据库
+
+1. 复制 SQL 模板并替换密码占位符：
+   ```bash
+   cp BooksManagementSystem/BooksManagementSystem.sql.template /tmp/init.sql
+   ```
+2. 打开 `/tmp/init.sql`，将所有 `your_admin_password` 和 `your_reader_password` 替换为你自己设置的强密码。
+3. 在 MySQL 中执行该脚本：
+   ```bash
+   mysql -u root -p < /tmp/init.sql
+   ```
+4. 导入完成后删除临时文件：
+   ```bash
+   rm /tmp/init.sql
+   ```
+
+### 安全最佳实践 (Best Practices)
+
+- ✅ **使用强密码**：避免使用 `123456`、`password123` 等弱密码。
+- ✅ **不要提交 `config.json`**：该文件包含真实密码，已通过 `.gitignore` 排除。
+- ✅ **不要提交 `*.sql` 文件**：SQL 导出文件可能包含敏感数据，已通过 `.gitignore` 排除。
+- ✅ **定期轮换密码**：数据库管理员和读者账号密码应定期更新。
+- ✅ **检查 Git 历史**：如果曾经意外提交了真实密码，请立即重置相关账号密码，并考虑使用 `git filter-branch` 或 [BFG Repo Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) 清理 Git 历史记录。
 ## 🛠️ 技术栈 (Technology Stack)
 
 本项目采用 **Python 3** 生态系统构建，结合了高效的图形界面与轻量级数据库方案：
