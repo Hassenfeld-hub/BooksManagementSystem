@@ -30,12 +30,13 @@ CREATE TABLE `admin`  (
 
 -- ----------------------------
 -- Records of admin
+-- IMPORTANT: Replace 'your_admin_password' below with a strong, unique password before importing.
 -- ----------------------------
-INSERT INTO `admin` VALUES (1, 'password123', 'admin01');
-INSERT INTO `admin` VALUES (2, 'password123', 'admin02');
-INSERT INTO `admin` VALUES (3, 'password123', 'admin03');
-INSERT INTO `admin` VALUES (4, 'password123', 'admin04');
-INSERT INTO `admin` VALUES (5, 'password123', 'admin05');
+INSERT INTO `admin` VALUES (1, 'your_admin_password', 'admin01');
+INSERT INTO `admin` VALUES (2, 'your_admin_password', 'admin02');
+INSERT INTO `admin` VALUES (3, 'your_admin_password', 'admin03');
+INSERT INTO `admin` VALUES (4, 'your_admin_password', 'admin04');
+INSERT INTO `admin` VALUES (5, 'your_admin_password', 'admin05');
 
 -- ----------------------------
 -- Table structure for book_info
@@ -138,17 +139,18 @@ CREATE TABLE `reader_card`  (
 
 -- ----------------------------
 -- Records of reader_card
+-- IMPORTANT: Replace 'your_reader_password' below with a strong, unique password before importing.
 -- ----------------------------
-INSERT INTO `reader_card` VALUES (1, '123456', 'zhangsan');
-INSERT INTO `reader_card` VALUES (2, '123456', 'lisi');
-INSERT INTO `reader_card` VALUES (3, '123456', 'wangwu');
-INSERT INTO `reader_card` VALUES (4, '123456', 'zhaoliu');
-INSERT INTO `reader_card` VALUES (5, '123456', 'sunqi');
-INSERT INTO `reader_card` VALUES (6, '123456', 'zhoub');
-INSERT INTO `reader_card` VALUES (7, '123456', 'wuj');
-INSERT INTO `reader_card` VALUES (8, '123456', 'zhengs');
-INSERT INTO `reader_card` VALUES (9, '123456', 'feng11');
-INSERT INTO `reader_card` VALUES (10, '123456', 'chen12');
+INSERT INTO `reader_card` VALUES (1, 'your_reader_password', 'zhangsan');
+INSERT INTO `reader_card` VALUES (2, 'your_reader_password', 'lisi');
+INSERT INTO `reader_card` VALUES (3, 'your_reader_password', 'wangwu');
+INSERT INTO `reader_card` VALUES (4, 'your_reader_password', 'zhaoliu');
+INSERT INTO `reader_card` VALUES (5, 'your_reader_password', 'sunqi');
+INSERT INTO `reader_card` VALUES (6, 'your_reader_password', 'zhoub');
+INSERT INTO `reader_card` VALUES (7, 'your_reader_password', 'wuj');
+INSERT INTO `reader_card` VALUES (8, 'your_reader_password', 'zhengs');
+INSERT INTO `reader_card` VALUES (9, 'your_reader_password', 'feng11');
+INSERT INTO `reader_card` VALUES (10, 'your_reader_password', 'chen12');
 
 -- ----------------------------
 -- Table structure for reader_info
